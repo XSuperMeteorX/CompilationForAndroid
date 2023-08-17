@@ -23,7 +23,7 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew app:assembleDebug
+      run: ./gradlew
 
     - name: Download a Build Artifact
       uses: actions/download-artifact@v2.1.1
