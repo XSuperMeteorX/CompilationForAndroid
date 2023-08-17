@@ -23,12 +23,12 @@ jobs:
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./gradlew
+      run: ./gradlew assemblyRelease
 
-    - name: Download a Build Artifact
+    - name: Upload APK
       uses: actions/download-artifact@v2.1.1
       with:
         # Artifact name
         name: app-debug
         # Destination path
-        path: ./*.apk
+        path: ${{ github.workspace }}/app/build/outputs/apk/release
